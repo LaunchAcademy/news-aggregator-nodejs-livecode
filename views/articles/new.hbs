@@ -1,1 +1,19 @@
-<h1>Add a new Article!</h1>
+<h1>Submit a new article!</h1>
+
+<form action="/articles" method="POST">
+  <label for="title">Title:
+    <input type="text" name="title" id="title"><br>
+  </label>
+
+  <label for="url">Url:
+    <input type="text" name="url" id="url"><br>
+  </label>
+
+  <label for="Description">Description:
+    <input type="text" name="description" id="description"><br>
+  </label>
+
+  <input type="submit" value="Add Article">
+</form>
+
+<a href="/articles">Back to Index Page</a>
