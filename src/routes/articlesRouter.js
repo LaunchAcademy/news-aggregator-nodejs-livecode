@@ -27,7 +27,7 @@ articlesRouter.get("/new", (req, res) => {
 //   res.redirect("/")
 // })
 
-//if the name of the article is not supplied when submitting the form, the user should not be redirected to /articles and instead they should remain on the form page
+//if the name of the article is not supplied when submitting the form, the user should not be redirected to /articles and instead they should remain on the form page, articles.json is not changed
 
 articlesRouter.post("/", (req, res) => {
   const formData = req.body
