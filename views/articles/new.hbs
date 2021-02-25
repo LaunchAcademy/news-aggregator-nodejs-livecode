@@ -1,5 +1,9 @@
 <h1>Submit a new article!</h1>
 
+{{#if error}}
+  <li>{{error}}</li>
+{{/if}}
+
 <form action="/articles" method="POST">
   <label for="title">Title:
     <input type="text" name="title" id="title"><br>
