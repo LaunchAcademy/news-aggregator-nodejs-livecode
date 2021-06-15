@@ -10,4 +10,16 @@ const articlesJson = () => {
   return JSON.parse(fs.readFileSync(articlesPath))
 }
 
+articlesRouter.get("/", (req, res) => {
+
+})
+
+articlesRouter.get("/new", (req, res) => {
+
+})
+
+articlesRouter.post("/", (req, res) => {
+
+})
+
 export default articlesRouter

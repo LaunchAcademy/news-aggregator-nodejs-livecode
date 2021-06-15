@@ -10,7 +10,6 @@ context("Articles Index", () => {
   it("lists all articles", () => {})
 
   it("has a link to go to the new article form", () => {
-    cy.get('a').contains("Click here to add a new article!").click()
-    cy.url().should("include", "/articles/new")
+
   })
 })
