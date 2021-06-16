@@ -2,10 +2,14 @@
 <ul>
   {{#each articles}}
   <div>
-    <li>Title: </li>
-    <li>Description:</li>
-    <li>....link </li>
+    <li>Title: {{ this.title }}</li>
+    <li>Description: {{ this.description }} </li>
+    <li> 
+      <a href={{this.url}} target="_blank"> {{this.url}} </a>
+    </li>
   </div>
   <br>
   {{/each}}
 </ul>
+
+<a href="/articles/new"> Add New Article </a>

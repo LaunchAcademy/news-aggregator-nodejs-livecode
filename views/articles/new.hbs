@@ -2,12 +2,25 @@
 
 {{#if error}}
 <li>{{error}}</li>
+<br>
 {{/if}}
 
-<form action="" method="">
+<form action="/articles" method="POST">
 
-
+  <label for="title"> Title: 
+    <input type="text" name="title" id="title" > 
+  </label>
   
+  <label for="description"> Description: 
+    <input type="text" name="description" id="description"> 
+  </label>
+
+  <label for="url"> Url: 
+    <input type="text" name="url" id="url"> 
+  </label>
+
+  <input type="submit" value="Add New Article">
+
 </form>
 
 

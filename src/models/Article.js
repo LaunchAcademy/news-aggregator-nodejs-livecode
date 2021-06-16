@@ -14,14 +14,19 @@ class Article {
   }
 
   static findAll() {
-    // ....
-    return articleObjects
+    const formalArticleObjectsArray = articlesJson().articles.map((articleObject) => {
+      return new Article(articleObject)
+    })
+
+    return formalArticleObjectsArray
   }
 
   save(){
-    
+    let existingArticles = Article.findAll()
+    existingArticles.push(this)
+    fs.writeFileSync(articlesPath, JSON.stringify({ articles: existingArticles }))
+    return true
   }
-
 }
 
 export default Article
