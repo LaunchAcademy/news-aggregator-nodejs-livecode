@@ -14,12 +14,19 @@ class Article {
   }
 
   static findAll() {
-    // ....
-    return articleObjects
+    const articlesData = JSON.parse(fs.readFileSync(articlesPath))
+    // console.log(articlesData)
+    const articlesObjectArray = articlesData.articles.map((articleObject) => {
+      return new Article(articleObject)
+    })
+    console.log(articlesObjectArray)
+    return articlesObjectArray
   }
 
   save(){
-    
+    let existingArticles = Article.findAll()
+    existingArticles.push(this)
+    fs.writeFileSync(articlesPath, JSON.stringify({ articles: existingArticles }))
   }
 
 }
