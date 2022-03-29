@@ -28,7 +28,7 @@ context("Articles New", () => {
   })
 
   it("has a link to go to the article index page", () => {
-    cy.get('a').contains("Back to the homepage").click()
+    cy.get("a").contains("Back to the homepage").click()
     cy.url().should("include", "/articles")
   })
 
